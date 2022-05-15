@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Контакты</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./css/main.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!--Шапка (навігатор)-->
+    <header class="header">
+      <div class="container header__nav_panel">
+        <nav class="nav">
+          <!--Логотип-->
+          <a href="./index.html" class="logo">Web<span>Studio</span></a>
+
+          <!--Навігація-->
+          <ul class="nav__menu">
+            <li class="menu_item">
+              <a href="./index.html" class="menu_a">Студия</a>
+            </li>
+            <li class="menu_item">
+              <a href="./portfolio.html" class="menu_a">Портфолио</a>
+            </li>
+            <li class="menu_item">
+              <a href="./contacts.html" class="menu_a active_link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!--Активні посилання на контаки-->
+        <ul class="header__contacts">
+          <li>
+            <a href="mailto:info@devstudio.com" class="contacts_a">
+              <svg class="icon_email">
+                <use href="./image/icons.svg#icon_email"></use>
+              </svg>
+              <span>info@devstudio.com</span>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+380961111111" class="contacts_a">
+              <svg class="icon_smartphone">
+                <use href="./image/icons.svg#icon_smartphone"></use>
+              </svg>
+              <span>+38 096 111 11 11</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <p>Контакты</p>
+
+    <!--Футер-->
+    <footer>
+      <section class="footer container">
+        <!--Футер адрес та логотип-->
+        <div class="footer__adress">
+          <!--Логотип-->
+          <a href="./index.html" class="logo">Web<span>Studio</span></a>
+
+          <!--Адреса та контакти-->
+          <div class="address">
+            <address>г. Киев, пр-т Леси Украинки, 26</address>
+            <ul class="address__info">
+              <li class="mail">
+                <a href="mailto:info@example.com">info@example.com</a>
+              </li>
+              <li class="phone">
+                <a href="tel:+380961111111">+38 096 111 11 11</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!--Футер соціальні  ссилкі-->
+        <div class="footer__links">
+          <h3>присоединяйтесь</h3>
+          <ul class="social_links">
+            <li>
+              <a href="">
+                <svg>
+                  <use href="./image/icons.svg#icon_instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <svg>
+                  <use href="./image/icons.svg#icon_twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <svg>
+                  <use href="./image/icons.svg#icon_facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <svg>
+                  <use href="./image/icons.svg#icon_linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Футер Підписка на розсилку -->
+        <div class="footer__subscription">
+          <h2>Подпишитесь на рассылку</h2>
+          <div class="subscription_sector">
+            <form>
+              <label class="label_sub_sector" for="email"></label>
+              <input
+                class="input_sub_sector"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="E-mail"
+              />
+            </form>
+            <button class="btn_send" type="submit">
+              Подписаться
+              <svg width="24" height="24">
+                <use href="./image/icons.svg#icon_send"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

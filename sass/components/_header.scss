@@ -1,0 +1,109 @@
+.header {
+    border: 1px solid #ECECEC;
+
+    &__nav_panel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 80px;
+    }
+
+    &__contacts {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+
+        li+li {
+                margin-left: 50px;
+            }
+
+        .contacts_a {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.15;
+            letter-spacing: 0.02em;
+            color: var(--contacts-color);
+            transition-property: color;
+            transition-duration: var(--transition-time);
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+            
+        .contacts_a>svg {
+            fill: var(--contacts-color);
+            transition-property: fill;
+            transition-duration: var(--transition-time);
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .contacts_a:hover>svg,
+        .contacts_a:focus>svg {
+            fill: var(--main-color-hover);
+        }
+            
+        .contacts_a:hover,
+        .contacts_a:focus {
+            color: var(--main-color-hover);
+        }
+        .icon_email {
+            width: 16px;
+            height: 12px;
+            margin-right: 10px;
+        }
+        .icon_smartphone {
+            width: 10px;
+            height: 16px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+    &__menu{
+        display: flex;
+        padding: 0;
+        margin: 0;
+
+       li+li {margin-left: 50px;}           
+    }
+
+        .menu_a {
+            position: relative;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.15;
+            letter-spacing: 0.02em;
+            color: var(--main-color);
+    
+            transition-property: color;
+            transition-duration: var(--transition-time);
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }    
+    
+        .active_link::after,
+        .active_link::after,
+        .active_link::after {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 4px;
+            bottom: -190%;
+            border-radius: 2px;
+            content: '';
+            background-color: var(--main-color-hover);
+        }
+    
+        .menu_a:hover,
+        .menu_a:focus {
+            color: var(--main-color-hover);
+        }
+}
+
+
+

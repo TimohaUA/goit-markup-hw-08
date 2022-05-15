@@ -1,0 +1,45 @@
+.regular_clients h2 {
+    margin-bottom: 50px;
+}
+
+.companies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0%;
+
+    a {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 170px;
+        height: 92px;
+        border: 1px solid var(--icons-color);
+        box-sizing: border-box;
+        border-radius: 4px;
+
+        transition-property: border-color;
+        transition-duration: var(--transition-time);
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    svg {
+        height: 60px;
+        fill: var(--icons-color);
+
+        transition-property: fill;
+        transition-duration: var(--transition-time);
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    a:hover,
+    a:focus {
+        border-color: var(--main-color-hover);
+    }
+
+    a:hover svg,
+    a:focus svg {
+        fill: var(--main-color-hover);
+    }
+}

@@ -1,0 +1,238 @@
+.modal_section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.modal_section.is-hidden .modal_window {
+    transform: scale(1.25);
+}
+
+.modal_window {
+    width: 528px;
+    height: 581px;
+    position: relative;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transform: scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    padding: 40px;
+}
+
+.modal_window>button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    height: 30px;
+    width: 30px;
+
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.btn_close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close {
+    width: 11px;
+    height: 11px;
+
+    transition-property: fill;
+    transition-duration: var(--transition-time);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn_close:hover,
+.btn_close:hover .close {
+    fill: var(--main-color-hover);
+    cursor: pointer;
+}
+
+.modal_window>h2 {
+    margin: 0;
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: var(--main-color);
+}
+
+.input_sector {
+    margin: 0;
+    height: 58px;
+    position: relative;
+}
+
+.input_sector:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.input_sector_textarea {
+    height: 138px;
+}
+
+.input_label {
+    display: block;
+    font-size: 12px;
+    line-height: 1.66;
+    letter-spacing: 0.01em;
+
+    color: var(--contacts-color);
+}
+
+.input {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px 0 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input:hover,
+.input:focus {
+    border: 1px solid var(--main-color-hover);
+    cursor: pointer;
+    outline: none;
+}
+
+.input:hover+.input_icon,
+.input:focus+.input_icon {
+    fill: var(--main-color-hover);
+}
+
+
+.input_icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input_textarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    resize: none;
+
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input_textarea:hover {
+    border: 1px solid var(--main-color-hover);
+    cursor: pointer;
+}
+
+.contract {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.input_checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.checkbox_span {
+    width: 16px;
+    height: 15px;
+    margin-right: 7px;
+
+    border: 2px solid var(--main-color);
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+
+.input_checkbox:checked+.checkbox_span {
+    border-color: var(--main-color-hover);
+    background-origin: border-box;
+    background-size: contain;
+    background-color: var(--main-color-hover);
+    background-image: url("../image/svg/check.svg");
+}
+
+.contract>p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    color: var(--contacts-color);
+}
+
+.conditions_contract {
+    text-decoration: underline;
+    color: var(--main-color-hover);
+}
+
+.submit_section {
+    display: flex;
+    justify-content: center;
+}
+
+.submit_btn {
+    width: 200px;
+    height: 50px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+
+    color: #ffffff;
+
+    background-color: var(--main-color-hover);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+
+    transition-property: background-color;
+    transition-duration: var(--transition-time);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.submit_btn:hover {
+    background-color: #188CE8;
+    cursor: pointer;
+}
+
+.is-hidden {
+    transition-delay: 200ms;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
