@@ -13,13 +13,13 @@
         margin: -30px 0 0 0;
 
         li {
-                background-color: var(--main-color-fones);
-                margin-top: 30px;
-        
-                box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-                    0px 1px 1px rgba(0, 0, 0, 0.14),
-                    0px 2px 1px rgba(0, 0, 0, 0.2);
-                border-radius: 0px 0px 4px 4px;
+            background-color: var(--main-color-fones);
+            margin-top: 30px;
+    
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+                0px 1px 1px rgba(0, 0, 0, 0.14),
+                0px 2px 1px rgba(0, 0, 0, 0.2);
+            border-radius: 0px 0px 4px 4px;
         }
 
         h3 {
@@ -71,12 +71,17 @@
                     transition-property: background-color;
                     transition-duration: var(--transition-time);
                     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-                }
+                
+                    &:hover,
+                    &:focus {
+                        background-color: var(--main-color-hover);
+                    }
 
-                a:hover,
-                a:focus {
-                    background-color: var(--main-color-hover);
-                }
+                    &:hover svg,
+                    &:focus svg {
+                        fill: var(--main-color-fones);
+                    }
+                }                
 
                 svg {
                     width: 20px;
@@ -86,12 +91,8 @@
                     transition-property: fill;
                     transition-duration: var(--transition-time);
                     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-                }
-
-                a:hover svg,
-                a:focus svg {
-                    fill: var(--main-color-fones);
-                }
+                
+                }                
             }
         }
     }

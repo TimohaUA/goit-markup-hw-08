@@ -22,6 +22,16 @@
         transition-property: border-color;
         transition-duration: var(--transition-time);
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+        &:hover,
+        &:focus {
+            border-color: var(--main-color-hover);
+        }
+    
+        &:hover svg,
+        &:focus svg {
+            fill: var(--main-color-hover);
+        }
     }
 
     svg {
@@ -31,15 +41,5 @@
         transition-property: fill;
         transition-duration: var(--transition-time);
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    a:hover,
-    a:focus {
-        border-color: var(--main-color-hover);
-    }
-
-    a:hover svg,
-    a:focus svg {
-        fill: var(--main-color-hover);
     }
 }

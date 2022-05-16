@@ -4,35 +4,35 @@
     margin: 0 auto;
     
     &__div{
-    background-color: var(--banner-background-color);
-    text-align: center;
-    padding: 200px 0;
+        background-color: var(--banner-background-color);
+        text-align: center;
+        padding: 200px 0;
 
-    .btn_order {
-    margin-top: 30px;
-    width: 200px;
-    height: 50px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    background-color: var(--main-color-hover);
-    color: var(--main-color-fones);
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
-    letter-spacing: 0.06em;
+        .btn_order {
+            margin-top: 30px;
+            width: 200px;
+            height: 50px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+            border-radius: 4px;
+            background-color: var(--main-color-hover);
+            color: var(--main-color-fones);
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 1.87;
+            letter-spacing: 0.06em;
 
-    transition-property: background-color;
-    transition-duration: var(--transition-time);
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    
-    .btn_order:hover {
-        background-color: #188ce8;
-    }
-    
-    .btn_order:focus {
-        background-color: #188ae8ee;
-    }
+            transition-property: background-color;
+            transition-duration: var(--transition-time);
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+            &:hover{
+                background-color: #188ce8;
+            }
+
+            &:focus{
+                background-color: #188ae8ee;
+            }
+        }
     }
 }
 

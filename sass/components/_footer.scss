@@ -13,7 +13,7 @@ footer {
                     color: var(--main-color-fones);
                 }
         }
-
+        
         address {
             font-style: normal;
             font-weight: 400;
@@ -167,6 +167,25 @@ footer {
                 transition-property: color;
                 transition-duration: var(--transition-time);
                 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            
+                &:hover svg,
+                &:focus svg {
+                    fill: var(--main-background-color);
+                }
+
+                &:hover,
+                &:focus {
+                    background-color: var(--icons-color);
+                    color: var(--main-background-color);
+                    cursor: pointer;
+                
+                    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+                        0px 1px 2px rgba(0, 0, 0, 0.08),
+                        0px 2px 2px rgba(0, 0, 0, 0.12);
+                    border-radius: 4px;
+                }
+
+
             }
         
             .btn_send>svg {
@@ -176,23 +195,6 @@ footer {
                 transition-property: fill;
                 transition-duration: var(--transition-time);
                 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            }
-        
-            .btn_send:hover svg,
-            .btn_send:focus svg {
-                fill: var(--main-background-color);
-            }
-        
-            .btn_send:hover,
-            .btn_send:focus {
-                background-color: var(--icons-color);
-                color: var(--main-background-color);
-                cursor: pointer;
-        
-                box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
-                    0px 1px 2px rgba(0, 0, 0, 0.08),
-                    0px 2px 2px rgba(0, 0, 0, 0.12);
-                border-radius: 4px;
             }
         }
     }
