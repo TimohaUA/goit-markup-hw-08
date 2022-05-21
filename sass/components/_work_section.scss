@@ -1,3 +1,9 @@
+@include for-phone{
+    .work_section{
+        display: none;
+    }
+}
+
 @include for-tablet{
     .work_section{
         display: none;

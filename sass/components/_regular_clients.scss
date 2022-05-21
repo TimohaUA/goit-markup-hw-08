@@ -17,6 +17,12 @@
         align-items: center;
         justify-content: center;
 
+        @include for-phone{
+            margin-top: 30px;
+            width: 210px;
+            height: 92px;
+        }
+
         @include for-tablet{
             margin-top: 30px;
             width: 226px;

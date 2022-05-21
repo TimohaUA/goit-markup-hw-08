@@ -15,10 +15,18 @@ footer {
     display: flex;
     flex-wrap: wrap;
 
+    @include for-phone{
+        display: block;
+    }
+
     &__top{
 
         display: flex;
         flex-wrap: wrap;
+
+        @include for-phone{
+            display: inline;
+        }
 
         @include for-tablet{
             margin: 30px auto;
@@ -26,11 +34,16 @@ footer {
 
         &__adress{
 
+            @include for-phone{
+                padding-top: 60px;
+            }
+
             text-align: center;
 
             .logo{    
-                display: inline-block;     
-                margin: 0;
+                @include for-phone{
+                    display: contents;
+                }                 
                 span {
                         color: var(--main-color-fones);
                     }
@@ -72,7 +85,16 @@ footer {
             margin: 0 0 0 70px;
             padding: 0;
 
+            @include for-phone{
+                margin: 60px auto 0 auto;
+                padding: 0;
+            }
+
             h3 {
+                @include for-phone{
+                    text-align: center;
+                }
+
                 margin: 0;
                 padding: 12px 0 0 0;
                 font-weight: 700;
@@ -88,6 +110,9 @@ footer {
                 padding: 0;
                 margin-top: 20px;
                 justify-content: center;
+                @include for-phone{
+                    margin-bottom: 0;
+                }
 
                 li+li {
                     margin-left: 10px;
@@ -124,6 +149,11 @@ footer {
 
     &__subscription {
 
+        @include for-phone{
+            display: inline-block;
+            margin: 60px auto;
+        }
+
         @include for-tablet{
             margin: 30px auto;
         }
@@ -146,6 +176,10 @@ footer {
             color: var(--main-color-fones);
             text-align: left;
 
+            @include for-phone{
+                text-align: center;
+            }
+
             @include for-tablet{
                 text-align: center;
             }
@@ -161,6 +195,10 @@ footer {
             
 
             .input_sub_sector {
+                @include for-phone{
+                    width: 450px;
+                }
+
                 @include for-tablet{
                     width: 450px;
                 }

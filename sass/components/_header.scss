@@ -6,6 +6,31 @@
 
         @include for-tablet{
             justify-content: space-between;
+        }       
+        
+        .burger_button{
+            background: none;
+            border: none;
+            margin: 10px 0 10px auto;
+
+            @include for-tablet{
+                display: none;
+            }
+
+            @include for-desctop{
+                display: none;
+            }
+
+            svg{
+                fill: black;
+            } 
+            
+            &:hover{
+                svg{
+                    fill: var(--main-color-hover);
+                }   
+                cursor: pointer;             
+            }
         }
     }
 
@@ -16,6 +41,10 @@
         justify-content: space-between;
         width: 100%;
         min-height: 80px;
+
+            @include for-phone{
+                display: none;
+            }
         }
 
         &__contacts {
@@ -133,6 +162,7 @@
             color: var(--main-color-hover);
         }
 }
+
 
 
 

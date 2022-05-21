@@ -16,6 +16,11 @@
 
 .modal_window {
 
+    @include for-phone{
+        width: 450px;
+        height: 609px;
+    }
+
     @include for-tablet{
         width: 450px;
         height: 609px;

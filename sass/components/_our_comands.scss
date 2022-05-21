@@ -5,6 +5,12 @@
     margin-bottom: 50px;
     }
 
+    @include for-phone{
+        h2 {
+            margin-bottom: 30px;
+        }
+    }
+
     &__our {
         display: flex;
         flex-wrap: wrap;
@@ -30,15 +36,24 @@
             border-radius: 0px 0px 4px 4px;
 
             .card_worker{
+                @include for-phone{
+                    .foto{
+                        width: 450px;
+                        height: 460px;
+                        img{
+                            width: 100%;
+                        }
+                    }                    
+                }
+
                 @include for-tablet{
                     .foto{
                         width: 354px;
                         height: 374px;
                         img{
-                            width: 354px;
+                            width: 354px;                            
                         }
-                    }
-                    
+                    }                    
                 }
 
                 @include for-desctop{

@@ -18,8 +18,17 @@
     
     &__div{
         background-color: var(--banner-background-color);
-        text-align: center;        
+        text-align: center;    
         
+        @include for-phone{
+            padding: 118px 0;  
+            
+            h1{
+                font-weight: 900;
+                font-size: 26px;
+                line-height: 1.62;
+            }
+        }        
 
         @include for-tablet{
             padding: 118px 0;  
@@ -54,6 +63,7 @@
 
             &:hover{
                 background-color: #188ce8;
+                cursor: pointer;    
             }
 
             &:focus{

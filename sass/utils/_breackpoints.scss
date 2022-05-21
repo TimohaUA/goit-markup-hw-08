@@ -1,3 +1,9 @@
+@mixin for-phone {
+    @media (min-width: 480px) and (max-width: 767px) {
+        @content;        
+    }    
+}
+
 @mixin for-tablet {
     @media (min-width: 768px) and (max-width: 1599px) {
         @content;        

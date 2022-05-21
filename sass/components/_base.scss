@@ -3,6 +3,10 @@
 
     margin: 0 auto;
 
+    @include for-phone{
+        max-width: 480px;
+    }
+
     @include for-tablet{
         max-width: 768px;
     }
@@ -15,6 +19,11 @@
 }
 
 .section {
+
+    @include for-phone{
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
 
     @include for-tablet{
         padding-top: 60px;

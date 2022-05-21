@@ -12,7 +12,11 @@
     padding: 0;
     margin: 0;
 
-    @include for-tablet{
+    display: flex;       
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    /*@include for-tablet{
         display: flex;       
         justify-content: space-between;
         flex-wrap: wrap;
@@ -22,7 +26,7 @@
         display: flex;       
         justify-content: space-between;
         flex-wrap: wrap;
-    }    
+    }    */
 
     &__top-section {
         display: flex;
@@ -33,9 +37,12 @@
         justify-content: center;
         height: 120px;
 
+        @include for-phone{
+            width: 450px;            
+        }
+        
         @include for-tablet{
-            width: 354px;
-            
+            width: 354px;            
         }
 
         @include for-desctop{
@@ -49,6 +56,12 @@
     }
 
     li {
+        @include for-phone{
+            width: 450px;
+            height: 226px;
+            margin-top: 30px;
+        }
+
         @include for-tablet{
             width: 354px;
             height: 251px;
