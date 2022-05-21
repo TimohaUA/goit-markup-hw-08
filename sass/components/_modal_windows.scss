@@ -15,8 +15,17 @@
 }
 
 .modal_window {
-    width: 528px;
-    height: 581px;
+
+    @include for-tablet{
+        width: 450px;
+        height: 609px;
+    }
+
+    @include for-desctop{
+        width: 528px;
+        height: 581px;
+    }
+    
     position: relative;
     background: var(--main-color-fones);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -187,8 +196,8 @@
 .contract>p {
     margin: 0;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
 
     color: var(--contacts-color);

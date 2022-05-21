@@ -1,4 +1,7 @@
 .logo {
+    display: flex;
+    align-items: center;
+
     font-family: var(--text-raleway);
     font-weight: 700;
     font-size: 26px;
@@ -10,5 +13,9 @@
 
     span {
         color: var(--main-color);
+    }
+
+    @include for-tablet{
+        margin-right: 88px;
     }
 }

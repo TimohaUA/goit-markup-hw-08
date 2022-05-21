@@ -20,11 +20,12 @@
   <body>
     <!--Шапка (навігатор)-->
     <header class="header">
-      <div class="container header__nav_panel">
-        <nav class="nav">
-          <!--Логотип-->
-          <a href="./index.html" class="logo">Web<span>Studio</span></a>
+      <div class="container header_container">
+        <!--Логотип-->
+        <a href="./index.html" class="logo">Web<span>Studio</span></a>
 
+        <div class="header__nav_panel">
+        <nav class="nav">
           <!--Навігація-->
           <ul class="nav__menu">
             <li class="menu_item">
@@ -58,6 +59,7 @@
             </a>
           </li>
         </ul>
+      </div>
       </div>
     </header>
 
@@ -164,12 +166,12 @@
           <!--Игорь Демьяненко-->
           <li class="comands__our__li">
             <div class="card_worker">
-              <img
+              <div class="foto">
+                <img
                 src="./image/Igor_Demyanenko.jpg"
-                width="270"
-                height="260"
                 alt="Фото Игорь Демьяненко"
               />
+              </div>
               <div class="worker">
                 <h3>Игорь Демьяненко</h3>
                 <p>Product Designer</p>
@@ -211,12 +213,12 @@
           <!--Ольга Репина-->
           <li>
             <div class="card_worker">
-              <img
+              <div class="foto">
+                <img
                 src="./image/Olha_Repina.jpg"
-                width="270"
-                height="260"
                 alt="Фото Ольга Репина"
               />
+              </div>
               <div class="worker">
                 <h3>Ольга Репина</h3>
                 <p>Frontend Developer</p>
@@ -257,12 +259,12 @@
           <!--Николай Тарасов-->
           <li>
             <div class="card_worker">
-              <img
+              <div class="foto">
+                <img
                 src="./image/Nikolay_Tarasov.jpg"
-                width="270"
-                height="260"
                 alt="Фото Николай Тарасов"
               />
+              </div>
               <div class="worker">
                 <h3>Николай Тарасов</h3>
                 <p>Marketing</p>
@@ -303,12 +305,12 @@
           <!--Михаил Ермаков-->
           <li>
             <div class="card_worker">
-              <img
+              <div class="foto">
+                <img
                 src="./image/Michail_Ermakov.jpg"
-                width="270"
-                height="260"
-                alt="Фото Михаил Ермаков"
-              />
+                alt="Фото Михаил Ермаков"/>
+              </div>
+              
               <div class="worker">
                 <h3>Михаил Ермаков</h3>
                 <p>UI Designer</p>
@@ -403,8 +405,10 @@
     <!--Футер-->
     <footer>
       <section class="footer container">
+
+        <div class="footer__top">
         <!--Футер адрес та логотип-->
-        <div class="footer__adress">
+        <div class="footer__top__adress">
           <!--Логотип-->
           <a href="./index.html" class="logo">Web<span>Studio</span></a>
 
@@ -423,7 +427,7 @@
         </div>
 
         <!--Футер соціальні  ссилкі-->
-        <div class="footer__links">
+        <div class="footer__top__links">
           <h3>присоединяйтесь</h3>
           <ul class="social_links">
             <li>
@@ -456,6 +460,7 @@
             </li>
           </ul>
         </div>
+      </div>
 
         <!-- Футер Підписка на розсилку -->
         <div class="footer__subscription">

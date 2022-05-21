@@ -1,17 +1,44 @@
 .order_service {
     background-image: url(../image/banner.jpg);
-    max-width: 1600px;
+    background-position: center;
+    background-size: cover;    
     margin: 0 auto;
+    background-repeat: no-repeat;
+
+
+
+    @include for-tablet{
+        min-width: 768px;        
+    }
+
+    @include for-desctop{
+        min-width: 1600px;
+    }
+
     
     &__div{
         background-color: var(--banner-background-color);
-        text-align: center;
-        padding: 200px 0;
+        text-align: center;        
+        
+
+        @include for-tablet{
+            padding: 118px 0;  
+            
+            h1{
+                font-weight: 900;
+                font-size: 26px;
+                line-height: 1.62;
+            }
+        }
+    
+        @include for-desctop{
+            padding: 200px 0;
+        }
 
         .btn_order {
-            margin-top: 30px;
             width: 200px;
             height: 50px;
+            margin-top: 30px;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
             border-radius: 4px;
             background-color: var(--main-color-hover);
@@ -19,7 +46,7 @@
             font-weight: 700;
             font-size: 16px;
             line-height: 1.87;
-            letter-spacing: 0.06em;
+            letter-spacing: 0.06em;          
 
             transition-property: background-color;
             transition-duration: var(--transition-time);

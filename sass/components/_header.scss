@@ -1,11 +1,20 @@
 .header {
     border: 1px solid #ECECEC;
 
-    @media (min-width: 768px) {
+    .header_container{
+        display: flex;
+
+        @include for-tablet{
+            justify-content: space-between;
+        }
+    }
+
+    
+       
         &__nav_panel {
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
+        width: 100%;
         min-height: 80px;
         }
 
@@ -15,21 +24,23 @@
                 display: flex;
                 padding: 0;
                 margin: 0;                
-                justify-content: center;
+                justify-content:center;
                 flex-direction: column;
+                li+li{
+                    margin-top: 10px;
+                }
             }
 
             @include for-desctop{
-               display: flex;
+                display: flex;
                 padding: 0;
                 margin: 0;
                 align-items: center; 
-            }
-            
 
-            li+li {
+                li+li {
                 margin-left: 50px;
-            }
+                }
+            }                       
 
             .contacts_a {
                 display: flex;
@@ -73,9 +84,10 @@
                 height: 16px;
                 margin-right: 10px;
             }
-        }        
-    }
+        }     
 }
+
+
 
 .nav {
     display: flex;

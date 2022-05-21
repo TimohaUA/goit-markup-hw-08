@@ -1,5 +1,7 @@
 .regular_clients h2 {
-    margin-bottom: 50px;
+    @include for-desctop{
+        margin-bottom: 50px;
+    }    
 }
 
 .companies {
@@ -7,14 +9,25 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0%;
+    margin: 0;
 
     a {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        width: 170px;
-        height: 92px;
+
+        @include for-tablet{
+            margin-top: 30px;
+            width: 226px;
+            height: 92px;
+        }
+
+        @include for-desctop{
+            width: 170px;
+            height: 92px;
+        }
+        
         border: 1px solid var(--icons-color);
         box-sizing: border-box;
         border-radius: 4px;

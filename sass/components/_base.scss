@@ -1,13 +1,31 @@
 .container {
     width: 100%;
-    max-width: 1200px;
+
     margin: 0 auto;
-    padding: 0 15px;
+
+    @include for-tablet{
+        max-width: 768px;
+    }
+
+    @include for-desctop{
+       max-width: 1200px;        
+    }
+
+    padding: 0 15px;    
 }
 
 .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+
+    @include for-tablet{
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @include for-desctop{
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+    
 }
 
 body {
