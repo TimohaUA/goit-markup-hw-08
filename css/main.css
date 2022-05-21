@@ -383,17 +383,26 @@ footer {
   }
 }
 
-.footer__top__adress {
-  text-align: center;
-}
-
 @media (min-width: 480px) and (max-width: 767px) {
   .footer__top__adress {
     padding-top: 60px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1599px) {
+  .footer__top__adress {
+    text-align: center;
   }
 }
 
 @media (min-width: 480px) and (max-width: 767px) {
+  .footer__top__adress .logo {
+    display: contents;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1599px) {
   .footer__top__adress .logo {
     display: contents;
   }
@@ -458,6 +467,12 @@ footer {
 }
 
 @media (min-width: 480px) and (max-width: 767px) {
+  .footer__top__links h3 {
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1599px) {
   .footer__top__links h3 {
     text-align: center;
   }
@@ -686,6 +701,12 @@ footer {
           transition-duration: var(--transition-time);
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 1600px) {
+  .footer__subscription .subscription_sector .btn_send {
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: 1600px) {
@@ -1508,6 +1529,164 @@ footer {
 }
 
 .is-hidden {
+  -webkit-transition-delay: 200ms;
+          transition-delay: 200ms;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.burger_section {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(28, 198, 79, 0.2);
+}
+
+.burger_window {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: var(--main-color-fones);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.burger_window > button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  height: 30px;
+  width: 30px;
+  border: none;
+  background: var(--main-color-fones);
+}
+
+.burger_window .btn_close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.burger_window .close {
+  width: 11px;
+  height: 11px;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-duration: var(--transition-time);
+          transition-duration: var(--transition-time);
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.burger_window .btn_close:hover,
+.burger_window .btn_close:hover .close {
+  fill: var(--main-color-hover);
+  cursor: pointer;
+}
+
+.burger_window__nav {
+  position: absolute;
+  top: 48px;
+  left: 40px;
+}
+
+.burger_window__nav li + li {
+  margin-top: 32px;
+}
+
+.burger_window__nav .menu_a {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  letter-spacing: 0.02em;
+  color: var(--main-color);
+}
+
+.burger_window__nav .menu_a:hover {
+  color: var(--main-color-hover);
+  cursor: pointer;
+}
+
+.burger_window__contacts {
+  position: absolute;
+  bottom: 134px;
+  left: 40px;
+}
+
+.burger_window__contacts li + li {
+  margin-top: 32px;
+}
+
+.burger_window__contacts .contacts_tel {
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: var(--main-color-hover);
+}
+
+.burger_window__contacts .contacts_tel:hover {
+  cursor: pointer;
+}
+
+.burger_window__contacts .contacts_mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  color: var(--contacts-color);
+}
+
+.burger_window__contacts .contacts_mail:hover {
+  cursor: pointer;
+}
+
+.burger_window__networks {
+  position: absolute;
+  bottom: 48px;
+  left: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.burger_window__networks a {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--main-color-hover);
+}
+
+.burger_window__networks li + li {
+  margin-left: 10px;
+  padding-left: 10px;
+  height: 22px;
+  border-left: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.is-hidden-burger {
   -webkit-transition-delay: 200ms;
           transition-delay: 200ms;
   visibility: hidden;

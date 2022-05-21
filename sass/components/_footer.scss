@@ -36,14 +36,20 @@ footer {
 
             @include for-phone{
                 padding-top: 60px;
+                text-align: center;
             }
 
-            text-align: center;
+            @include for-tablet{
+                text-align: center;
+            }            
 
             .logo{    
                 @include for-phone{
                     display: contents;
-                }                 
+                }  
+                @include for-tablet{
+                    display: contents;
+                }        
                 span {
                         color: var(--main-color-fones);
                     }
@@ -92,6 +98,9 @@ footer {
 
             h3 {
                 @include for-phone{
+                    text-align: center;
+                }
+                @include for-tablet{
                     text-align: center;
                 }
 
@@ -230,6 +239,9 @@ footer {
             }
         
             .btn_send {
+                @include for-desctop{
+                    margin: 0 auto;
+                }
                 margin: 20px auto 0 auto;
                 font-weight: 700;
                 font-size: 16px;
