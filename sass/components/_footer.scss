@@ -91,6 +91,10 @@ footer {
             margin: 0 0 0 70px;
             padding: 0;
 
+            @include for-tablet{
+                margin-left: 165px;
+            }
+
             @include for-phone{
                 margin: 60px auto 0 auto;
                 padding: 0;
@@ -174,7 +178,14 @@ footer {
 
         h2 {
             margin-bottom: 20px;
-            padding-top: 10px;
+
+            @include for-desctop{
+                padding-top: 10px;
+            }
+            
+            @include for-tablet{
+                margin-top: 0;
+            }
     
             font-weight: 700;
             font-size: 14px;

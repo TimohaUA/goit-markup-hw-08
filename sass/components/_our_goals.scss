@@ -4,7 +4,7 @@
 }
 
 .our_goals_h {
-    display: none;
+    display: none;    
 }
 
 .our_goals {
@@ -82,6 +82,10 @@
         letter-spacing: 0.03em;
         text-transform: uppercase;
         color: var(--main-color);
+
+        @include for-phone{
+            text-align: center;
+        }
     }
 
     p {

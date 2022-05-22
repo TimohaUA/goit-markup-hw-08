@@ -12,12 +12,27 @@
     margin: 0;
     padding: 0;
     margin-bottom: 30px;
+
+    &>li:not(:first-child) {
+        margin-left: 8px;
+    }
+
+    @include for-phone{
+        margin-bottom: 40px;
+        justify-content: flex-start;
+        &>li:not(:first-child){
+            margin-left: 0;
+            margin-right: 8px;
+        }
+    }
+
+    @include for-desctop{
+        margin-bottom: 50px;
+    }   
 }
 
 
-.sort_btn>li:not(:first-child) {
-    margin-left: 8px;
-}
+
 
 .btn {
     @include for-phone{
