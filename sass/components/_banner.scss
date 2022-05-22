@@ -5,14 +5,12 @@
     margin: 0 auto;
     background-repeat: no-repeat;
 
-
-
     @include for-tablet{
         min-width: 768px;        
     }
 
     @include for-desctop{
-        min-width: 1600px;
+        min-width: 1200px;
     }
 
     
